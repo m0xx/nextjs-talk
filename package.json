@@ -1,0 +1,30 @@
+{
+  "name": "nextjs-talk",
+  "version": "1.0.0",
+  "description": "Next.js talk presented at https://saglac.io/",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m0xx/nextjs-talk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m0xx/nextjs-talk/issues"
+  },
+  "homepage": "https://github.com/m0xx/nextjs-talk#readme",
+  "dependencies": {
+    "next": "^6.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4"
+  }
+}
