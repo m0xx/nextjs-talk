@@ -4,7 +4,7 @@
   "description": "Next.js talk presented at https://saglac.io/",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3001",
     "build": "next build",
     "start": "cross-env NODE_ENV=production next start"
   },
