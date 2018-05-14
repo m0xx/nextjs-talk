@@ -1,0 +1,21 @@
+Router.onRouteChangeStart = url => {
+    NProgress.start();
+};
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
+
+export default () => (
+    <div style={{ marginBottom: 20 }}>
+        <Head>
+            <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
+        </Head>
+
+        <Link href="/routing">Home</Link>
+        <Link href="/routing/about">About</Link>
+        <a href="/routing/about">
+            About <small>server</small>
+        </a>
+        <Link href="/routing/forever">Forever</Link>
+        <Link href="/routing/search?q=nextjs">/search?q=nextjs</Link>
+    </div>
+);

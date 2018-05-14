@@ -1,7 +1,6 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "nextjs-talk-presentation",
   "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",

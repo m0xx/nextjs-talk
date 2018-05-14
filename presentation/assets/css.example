@@ -1,0 +1,19 @@
+export default () => (
+    <div>
+        Hello world
+        <p>scoped!</p>
+        <style jsx>{`
+            p {
+                color: blue;
+            }
+            div {
+                background: blue;
+            }
+        `}</style>
+        <style global jsx>{`
+            body {
+                background-color: #FFF;
+            }
+        `}</style>
+    </div>
+);

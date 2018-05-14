@@ -1,0 +1,20 @@
+import React, { Component } from 'react'
+import Header from '../../components/Header'
+
+export default class About extends Component {
+    static async getInitialProps () {
+        await new Promise((resolve) => {
+            setTimeout(resolve, 500)
+        })
+        return {}
+    }
+
+    render () {
+        return (
+            <div>
+                <Header />
+                <p>This is about Next!</p>
+            </div>
+        )
+    }
+}
