@@ -29,6 +29,14 @@ import FilePane from './FilePane';
 import DemoPane from './DemoPane';
 import ImageCredit from './ImageCredit';
 
+function listHtml(items) {
+    let content = '';
+    items.forEach((item) => {content += `<li>${ item }</li>`});
+    return `<ul>
+            ${ content }
+        </ul>`
+}
+
 export default class Presentation extends React.Component {
     render() {
         return (
@@ -50,13 +58,13 @@ export default class Presentation extends React.Component {
                         link="https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8"
                     >walmartlabs</ImageCredit>
                 </Slide>
-                <Slide>
+                <Slide notes={listHtml(['seo Bing, Yahoo, or Baidu'])}>
                         <Image src={images.ssr} width="100%"/>
                         <ImageCredit
                             link="https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8"
                         >walmartlabs</ImageCredit>
                 </Slide>
-                <Slide>
+                <Slide notes={listHtml(['user interaction'])}>
                       <Image src={images.csr} width="100%"/>
                       <ImageCredit
                           link="https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8"
@@ -65,12 +73,12 @@ export default class Presentation extends React.Component {
                 <Slide>
                     <CodePane source={require('raw-loader!./../assets/spa.html')} lang="html" />
                 </Slide>
-                <Slide>
+                <Slide notes={listHtml(['routing', 'state sharing'])}>
                     <Heading size={1} textColor="tertiary">
                         SSR + SPA = Universal app!
                     </Heading>
                 </Slide>
-              <Slide>
+              <Slide notes={listHtml(['convention over configuration', 'customisation'])}>
                       <Layout>
                           <Image src={images.structure} height="300px" width="300px" />
                           <Fill style={{marginLeft: 50}}>
@@ -103,7 +111,7 @@ export default class Presentation extends React.Component {
                         <CodePane source={"export default () => <img src=\"/static/my-image.png\" alt=\"my image\" />"}/>
                     </Layout>
                 </Slide>
-                <Slide transition={['fade']} bgColor="quarternary">
+                <Slide notes={listHtml(['css-in-js', 'less, css, sass'])} transition={['fade']} bgColor="quarternary">
                     <Heading size={2} textColor="primary">
                         styled-jsx
                     </Heading>
@@ -114,23 +122,23 @@ export default class Presentation extends React.Component {
                         <DemoPane path="/styled" height={300}/>
                     </Layout>
                 </Slide>
-                <Slide transition={['fade']} bgColor="secondary" maxWidth="100%">
+                <Slide  notes={listHtml(['data loading', 'code splitting', 'librairie dependancies'])} transition={['fade']} bgColor="secondary" maxWidth="100%">
                     <Heading size={4} textColor="primary">
                         pages
                     </Heading>
                     <Layout style={{marginTop: 25}}>
-                        <Fill style={{marginRight: 25}}>
+                        <Fill style={{marginRight: 25, minWidth: '600px'}}>
                             <CodePane source={require('raw-loader!./../assets/page.example')} lang="jsx"/>
                         </Fill>
                         <DemoPane path="/" height={300}/>
                     </Layout>
                 </Slide>
-                <Slide transition={['fade']} bgColor="tertiary" maxWidth="100%">
+                <Slide notes={listHtml(['client side routing', 'transition', 'pre-fetch', 'dynamic import'])} transition={['fade']} bgColor="tertiary" maxWidth="100%">
                     <Heading size={4} textColor="primary">
                         routing
                     </Heading>
                     <Layout style={{marginTop: 25}}>
-                        <Fill style={{marginRight: 25}}>
+                        <Fill style={{marginRight: 25, minWidth: '600px'}}>
                             <FilePane
                                 files={[
                                     { filename: 'Header.js', source: require('raw-loader!./../assets/Header.example'), lang: 'jsx' },
@@ -141,7 +149,7 @@ export default class Presentation extends React.Component {
                         <DemoPane path="/routing" height={300}/>
                     </Layout>
                 </Slide>
-                <Slide transition={['fade']} bgColor="secondary" textColor="primary">
+                <Slide notes={listHtml(['route declaration'])} transition={['fade']} bgColor="secondary" textColor="primary">
                     <Heading size={4} textColor="primary">
                         Static HTML export
                     </Heading>

@@ -19,7 +19,7 @@ npm start
 
 # Presentation
 
-- Presenter at [http://localhost:3000/?presenter](http://localhost:3000/?presenter)
+- Presenter at [http://localhost:3000/#/?presenter&timer](http://localhost:3000/#/?presenter&timer)
 - Presentation screen at [http://localhost:3000/](http://localhost:3000/)
 
 
